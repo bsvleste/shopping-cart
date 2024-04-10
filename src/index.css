@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  @apply bg-zinc-900   text-zinc-200
+}
+@layer components {
+  .hiddenCart{
+    @apply animate-menuOut translate-x-[100%];
+  }
+  .cartButton ~ input:checked ~ .hiddenCart {
+    @apply block animate-menuIn translate-x-0 ;
+  }
+}
